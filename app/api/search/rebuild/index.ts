@@ -1,3 +1,6 @@
+import type { NextApiHandler, NextApiRequest, NextApiResponse } from 'next'
+import { createClient, Entry, Environment } from 'contentful-management'
+
 const cleanContentType = async () => {
 console.log('666666666666');
 return 
@@ -19,9 +22,9 @@ const handler: NextApiHandler = async (
       }.`
 
   if (req.query.key === process.env.CRON_KEY) {
-    console.log('111111111111');
+    console.log('1111111111111');
     
-    if (!contentType || isContentType(contentType)) {
+    if (!contentType) {
       console.log('2222222222');
       authorized = true
       res.status(200).end(authorizedMessage)
@@ -46,12 +49,7 @@ const handler: NextApiHandler = async (
     const environment = await space.getEnvironment(
       process.env.CONTENTFUL_ENVIRONMENT as string
     )
-    // contentfulClient is a subtly different API than environment
-    const contentfulClient = initContentfulClient(
-      process.env.CONTENTFUL_SPACE_ID as string,
-      process.env.CONTENTFUL_ENVIRONMENT as string,
-      process.env.CONTENTFUL_ACCESS_TOKEN as string
-    )
+
 
     if (!contentType) {
       await cleanContentType()
