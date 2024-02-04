@@ -1,7 +1,7 @@
 {
   "crons": [
     {
-      "path": "/api/search/rebuild?key=7bxYgkIwLy8jwbIIiK63z7iUFZw1kQzA",
+      "path": "/api/cron/testcron/",
       "schedule": "0 16 * * *"
     }
   ]
