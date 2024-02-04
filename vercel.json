@@ -2,7 +2,7 @@
   "crons": [
     {
       "path": "/api/search/rebuild?key=7bxYgkIwLy8jwbIIiK63z7iUFZw1kQzA",
-      "schedule": "43 14 * * *"
+      "schedule": "48 14 * * *"
     }
   ]
 }
